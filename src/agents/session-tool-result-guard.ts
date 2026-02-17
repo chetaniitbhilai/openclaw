@@ -18,7 +18,7 @@ const GUARD_TRUNCATION_SUFFIX =
 // Session transcripts should be resilient across providers. Some OpenAI-compatible APIs
 // generate tool call ids like `functions.exec:0` (or include whitespace), which can
 // break strict parsers / validators on reload. Normalize ids before persistence and
-// apply a stable mapping to corresponding toolResult messages.
+// apply a stable mapping to corresponding toolResult messages
 const PERSISTED_TOOL_ID_RE = /^[a-zA-Z0-9_-]+$/;
 
 function shortHash(text: string, length = 8): string {
